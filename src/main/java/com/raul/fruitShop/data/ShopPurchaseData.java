@@ -2,8 +2,6 @@ package com.raul.fruitShop.data;
 
 import lombok.*;
 
-import java.util.Map;
-
 
 @Getter
 @Setter

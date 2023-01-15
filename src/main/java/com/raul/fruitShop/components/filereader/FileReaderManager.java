@@ -4,10 +4,7 @@ package com.raul.fruitShop.components.filereader;
 import com.raul.fruitShop.Exceptions.FruitShopException;
 import org.springframework.stereotype.Component;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;

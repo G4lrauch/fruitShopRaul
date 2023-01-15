@@ -1,7 +1,7 @@
 package com.raul.fruitShop;
 
 import com.raul.fruitShop.Exceptions.FruitShopException;
-import com.raul.fruitShop.managers.FruitShopManager;
+import com.raul.fruitShop.services.FruitShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Bean;
 public class FruitShopApplication {
 
 	@Autowired
-	private FruitShopManager manager;
+	private FruitShopService service;
 
 	public static void main(String[] args) throws FruitShopException {
 		SpringApplication.run(FruitShopApplication.class, args);
@@ -24,7 +24,7 @@ public class FruitShopApplication {
 		return new CommandLineRunner() {
 			@Override
 			public void run(String... args) throws Exception {
-				manager.printTicketOfPurchase();
+				service.printTicketOfPurchase();
 			}
 		};
 	}

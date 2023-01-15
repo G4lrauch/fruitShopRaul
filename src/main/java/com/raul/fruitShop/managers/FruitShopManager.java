@@ -10,7 +10,10 @@ import com.raul.fruitShop.services.FruitShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
 import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 @Component
 public class FruitShopManager implements FruitShopService {
@@ -27,6 +30,7 @@ public class FruitShopManager implements FruitShopService {
     @Autowired
     private FruitShopDatabase database;
 
+    @Autowired
     private ShopTicketData ticket;
 
     private void populateData() throws FruitShopException {
@@ -46,9 +50,14 @@ public class FruitShopManager implements FruitShopService {
 
         //mock data
         ticket.setTotalPrice(20.5);
+        List<String> productsPurchased = database.getPurchase()
+                .stream()
+                .map(item -> item.getProduct())
+                .collect(toList());
+        ticket.setProductsPurchased(productsPurchased);
 
-        System.out.println("TotalPrice: " + ticket.getTotalPrice());
-        System.out.println("ProductsPurchased: ");
+        System.out.println("Total price: " + ticket.getTotalPrice());
+        System.out.println("Products purchased: ");
         ticket.getProductsPurchased().forEach(System.out::println);
     }
 
