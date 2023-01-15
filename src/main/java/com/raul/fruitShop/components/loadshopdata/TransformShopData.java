@@ -6,9 +6,9 @@ import com.raul.fruitShop.data.ShopPurchaseData;
 import java.util.List;
 import java.util.stream.Stream;
 
-public interface LoadShopData {
+public interface TransformShopData {
 
-    public List<ShopPricesData> loadStorePricesData(Stream<String> streamPrices);
-    public List<ShopPurchaseData> loadStorePurchaseData(Stream<String> streamPurchase);
+    public List<ShopPricesData> getPricesData(Stream<String> streamPrices);
+    public List<ShopPurchaseData> getPurchaseData(Stream<String> streamPurchase);
 
 }

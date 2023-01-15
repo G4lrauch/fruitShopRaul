@@ -10,8 +10,9 @@ import java.util.Map;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class StorePricesData {
+public class ShopPricesData {
 
-    private Map<String, Double> storePrices;
+    private String product;
+    private Double price;
 
 }

@@ -10,24 +10,24 @@ import java.util.stream.Stream;
 
 
 @Component
-public class LoadShopDataManager {
+public class TransformShopDataManager implements TransformShopData {
 
-    public List<ShopPricesData> loadStorePricesData(Stream<String> streamPrices) {
+    public List<ShopPricesData> getPricesData(Stream<String> streamPrices) {
         return streamPrices
                 .skip(1)
                 .map(line -> {
                     String[] splitted = line.split(",");
-                    return new ShopPricesData(splitted[0].trim(), Double.parseDouble([1].trim()));
+                    return new ShopPricesData(splitted[0].trim(), Double.parseDouble(splitted[1].trim()));
                 })
                 .collect(Collectors.toList());
     }
 
-    public List<ShopPurchaseData> loadStorePurchaseData(Stream<String> streamPurchase) {
+    public List<ShopPurchaseData> getPurchaseData(Stream<String> streamPurchase) {
         return streamPurchase
                 .skip(1)
                 .map(line -> {
                     String[] splitted = line.split(",");
-                    return new ShopPurchaseData(splitted[0].trim(), Double.parseDouble([1].trim()));
+                    return new ShopPurchaseData(splitted[0].trim(), Double.parseDouble(splitted[1].trim()));
                 })
                 .collect(Collectors.toList());
     }

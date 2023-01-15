@@ -2,11 +2,12 @@ package com.raul.fruitShop.components.filereader;
 
 import com.raul.fruitShop.Exceptions.FruitShopException;
 
+import java.nio.file.Path;
 import java.util.stream.Stream;
 
 
-public interface LoadFileData {
+public interface FileReader {
 
-    Stream<String> readFileAsStream(String fileName) throws FruitShopException;
+    public Stream<String> readFileAsStream(String file) throws FruitShopException;
 
 }
