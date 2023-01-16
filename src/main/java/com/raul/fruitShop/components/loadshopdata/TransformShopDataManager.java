@@ -12,6 +12,7 @@ import java.util.stream.Stream;
 @Component
 public class TransformShopDataManager implements TransformShopData {
 
+    @Override
     public List<ShopPricesData> getPricesData(Stream<String> streamPrices) {
         return streamPrices
                 .skip(1)
@@ -22,6 +23,7 @@ public class TransformShopDataManager implements TransformShopData {
                 .collect(Collectors.toList());
     }
 
+    @Override
     public List<ShopPurchaseData> getPurchaseData(Stream<String> streamPurchase) {
         return streamPurchase
                 .skip(1)

@@ -1,6 +1,6 @@
 package com.raul.fruitShop.components.filereader;
 
-import com.raul.fruitShop.Exceptions.FruitShopException;
+import com.raul.fruitShop.exceptions.FruitShopException;
 
 import java.util.stream.Stream;
 

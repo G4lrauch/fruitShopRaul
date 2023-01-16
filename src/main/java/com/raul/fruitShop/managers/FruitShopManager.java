@@ -1,6 +1,6 @@
 package com.raul.fruitShop.managers;
 
-import com.raul.fruitShop.Exceptions.FruitShopException;
+import com.raul.fruitShop.exceptions.FruitShopException;
 import com.raul.fruitShop.components.filereader.FileReaderManager;
 import com.raul.fruitShop.components.loadshopdata.TransformShopData;
 import com.raul.fruitShop.config.AppConfig;
@@ -44,6 +44,7 @@ public class FruitShopManager implements FruitShopService {
 
     }
 
+    @Override
     public void printTicketOfPurchase() throws FruitShopException {
         populateData();
         doCalculateTicket();

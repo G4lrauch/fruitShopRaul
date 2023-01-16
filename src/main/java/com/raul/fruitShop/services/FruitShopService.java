@@ -1,7 +1,7 @@
 package com.raul.fruitShop.services;
 
 
-import com.raul.fruitShop.Exceptions.FruitShopException;
+import com.raul.fruitShop.exceptions.FruitShopException;
 
 
 public interface FruitShopService {

@@ -1,4 +1,4 @@
-package com.raul.fruitShop.Exceptions;
+package com.raul.fruitShop.exceptions;
 
 public class FruitShopException extends Exception {
 

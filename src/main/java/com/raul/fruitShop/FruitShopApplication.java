@@ -1,6 +1,6 @@
 package com.raul.fruitShop;
 
-import com.raul.fruitShop.Exceptions.FruitShopException;
+import com.raul.fruitShop.exceptions.FruitShopException;
 import com.raul.fruitShop.services.FruitShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

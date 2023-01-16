@@ -1,6 +1,6 @@
 package com.raul.fruitShop.components.filereader;
 
-import com.raul.fruitShop.Exceptions.FruitShopException;
+import com.raul.fruitShop.exceptions.FruitShopException;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
