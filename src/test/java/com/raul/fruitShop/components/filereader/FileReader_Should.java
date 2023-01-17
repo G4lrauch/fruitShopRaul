@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrowsExactly;
 
 @SpringBootTest
 public class FileReader_Should {
@@ -21,9 +22,14 @@ public class FileReader_Should {
         String expected = "PRODUCT,PRICE\nPear, 0.75\nApple,0.9\nOrange,1";
 
         Stream<String> fileStream = fileReader.readFileAsStream("FruitShopPrices.txt");
-        String content = fileStream.collect(Collectors.joining("\n"));
+        String result = fileStream.collect(Collectors.joining("\n"));
 
-        assertEquals(expected, content);
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void return_exception_with_null_file(){
+        assertThrowsExactly(FruitShopException.class, () -> fileReader.readFileAsStream(null));
     }
 
 }

@@ -5,7 +5,7 @@ import lombok.*;
 
 @Getter
 @Setter
-@NoArgsConstructor
+@EqualsAndHashCode
 @AllArgsConstructor
 @ToString
 public class ShopPurchaseData {

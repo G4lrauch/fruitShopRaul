@@ -1,11 +1,11 @@
 package com.raul.fruitShop.managers;
 
-import com.raul.fruitShop.exceptions.FruitShopException;
 import com.raul.fruitShop.components.filereader.FileReaderManager;
-import com.raul.fruitShop.components.loadshopdata.TransformShopData;
+import com.raul.fruitShop.components.loadshopdata.LoadShopData;
 import com.raul.fruitShop.config.AppConfig;
 import com.raul.fruitShop.data.FruitShopDatabase;
 import com.raul.fruitShop.data.ShopTicketData;
+import com.raul.fruitShop.exceptions.FruitShopException;
 import com.raul.fruitShop.services.FruitShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -22,7 +22,7 @@ public class FruitShopManager implements FruitShopService {
     private FileReaderManager loadFile;
 
     @Autowired
-    private TransformShopData transformData;
+    private LoadShopData transformData;
 
     @Autowired
     private AppConfig config;
@@ -35,9 +35,9 @@ public class FruitShopManager implements FruitShopService {
 
     private void populateData() throws FruitShopException {
         Stream<String> pricesFile = loadFile.readFileAsStream(config.getStorePricesFile());
-        database.setPrices(transformData.getPricesData(pricesFile));
+        database.setPrices(transformData.getShopPricesData(pricesFile));
         Stream<String> purchaseFile = loadFile.readFileAsStream(config.getStorePurchaseFile());
-        database.setPurchase(transformData.getPurchaseData(purchaseFile));
+        database.setPurchase(transformData.getShopPurchaseData(purchaseFile));
     }
 
     private void doCalculateTicket() throws FruitShopException {

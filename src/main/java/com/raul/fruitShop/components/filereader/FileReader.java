@@ -7,6 +7,6 @@ import java.util.stream.Stream;
 
 public interface FileReader {
 
-    public Stream<String> readFileAsStream(String file) throws FruitShopException;
+    public Stream<String> readFileAsStream(String fileName) throws FruitShopException;
 
 }
