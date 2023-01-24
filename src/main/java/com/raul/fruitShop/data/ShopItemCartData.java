@@ -8,9 +8,14 @@ import lombok.*;
 @EqualsAndHashCode
 @AllArgsConstructor
 @ToString
-public class ShopPricesData {
+public class ShopItemCartData {
 
     private String product;
-    private Double price;
+    private Double quantity;
+
+    public enum ShopPurchaseLabels {
+        PRODUCT,
+        QUANTITY
+    }
 
 }

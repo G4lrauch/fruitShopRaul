@@ -1,6 +1,5 @@
 package com.raul.fruitShop;
 
-import com.raul.fruitShop.exceptions.FruitShopException;
 import com.raul.fruitShop.services.FruitShopService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -15,7 +14,7 @@ public class FruitShopApplication {
 	@Autowired
 	private FruitShopService service;
 
-	public static void main(String[] args) throws FruitShopException {
+	public static void main(String[] args) {
 		SpringApplication.run(FruitShopApplication.class, args);
 	}
 

@@ -7,10 +7,12 @@ import lombok.*;
 @Setter
 @EqualsAndHashCode
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
-public class ShopPurchaseData {
+public class ShopPurchasedItemData {
 
     private String product;
     private Double quantity;
+    private Double price;
 
 }

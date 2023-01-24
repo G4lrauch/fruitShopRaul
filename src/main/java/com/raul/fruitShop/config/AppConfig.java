@@ -15,4 +15,7 @@ public class AppConfig {
     @Value( "${store.purchase.file.name}" )
     public String storePurchaseFile;
 
+    @Value("${store.file.item.separator}")
+    public String fileItemSeparator;
+
 }
