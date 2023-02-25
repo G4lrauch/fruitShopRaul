@@ -2,17 +2,17 @@ package com.raul.fruitShop.data;
 
 import lombok.*;
 
-import java.util.Map;
-
 
 @Getter
 @Setter
-@NoArgsConstructor
+@EqualsAndHashCode
 @AllArgsConstructor
+@NoArgsConstructor
 @ToString
-public class ShopPricesData {
+public class ShopPurchasedItemData {
 
     private String product;
+    private Double quantity;
     private Double price;
 
 }

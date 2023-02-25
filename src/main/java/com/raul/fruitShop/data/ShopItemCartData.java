@@ -2,17 +2,20 @@ package com.raul.fruitShop.data;
 
 import lombok.*;
 
-import java.util.Map;
-
 
 @Getter
 @Setter
-@NoArgsConstructor
+@EqualsAndHashCode
 @AllArgsConstructor
 @ToString
-public class ShopPurchaseData {
+public class ShopItemCartData {
 
     private String product;
     private Double quantity;
+
+    public enum ShopPurchaseLabels {
+        PRODUCT,
+        QUANTITY
+    }
 
 }
