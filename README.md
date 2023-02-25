@@ -1,4 +1,4 @@
-This proyect consists of setting up a fruit shop. 
+This project consists of setting up a fruit shop. 
 The store will have a series of products. 
 Each product will have a value. For example:
 
